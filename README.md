@@ -1,40 +1,22 @@
 # GHM-YOLO
 ## Offcial implementation of "GHM-YOLO: An efficient detection model for classroom student behavior".
 
-![pipeline](./GHM-YOLO_files/Model.png)
+![pipeline](./GHM-YOLO_files/model.png)
 ## 1. Dependencies
-```
-python==3.6.13
-scipy==1.5.3
-tqdm==4.63.0
-yacs==0.1.8
-pyyaml==6.0.1
-requests==2.27.1
-protobuf==3.19.6
-torch==1.10.2+cu113
-opencv==4.5.3
-pillow==6.2.2
-matplotlib==3.3.4
-scikit-learn==0.24.2
-torchvision==0.11.3+cu113
-torchaudio==0.10.2+cu113
-torch-geometric==2.0.3
-numpy==1.19.5
-pandas==1.1.5
+Install the `ultralytics` package, including all [requirements](https://github.com/ultralytics/ultralytics/blob/main/pyproject.toml), in a [**Python>=3.8**](https://www.python.org/) environment with [**PyTorch>=1.8**](https://pytorch.org/get-started/locally/).
 
+[![PyPI - Version](https://img.shields.io/pypi/v/ultralytics?logo=pypi&logoColor=white)](https://pypi.org/project/ultralytics/) [![Ultralytics Downloads](https://static.pepy.tech/badge/ultralytics)](https://clickpy.clickhouse.com/dashboard/ultralytics) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ultralytics?logo=python&logoColor=gold)](https://pypi.org/project/ultralytics/)
+
+```bash
+pip install ultralytics
 ```
 ## 2. Usage
 ### 2.1 Data preparation
 
-![pipeline](./SCTNet_files/dataset.png)
+![pipeline](./GHM-YOLO_files/dataset.png)
 
-We created a large traffic accident dataset called 4M-TAD containing frame-level labels standardized for unsupervised traffic accident detection.
-
-As the paper is currently in the process of submitting, the dataset needs to be kept confidential for the time being, here we only disclose part of the dataset:
-
-[4M-TAD_Part_1](https://drive.google.com/file/d/142zp6sD6WZ6RyWt0QTmOAmB7msLV8KVQ/view?usp=drive_link)
-
-The full dataset will be updated after the acceptance of the article.
+We built a self-collected dataset named SCAR-7D (Student Classroom Activity Recognition Dataset with 7 Classes) to evaluate the generalization of our model in real classroom environments.
+The dataset contains 100 lecture videos recorded under strict privacy compliance, covering pre-class, in-class, and post-class periods. Representative keyframes were extracted using a local-extrema frame-difference method (computed every 24 frames), filtering out irrelevant or low-variation frames. After preprocessing, 5,477 high-quality keyframes were obtained and carefully annotated with LabelImg into seven categories of classroom behaviors: reading/writing, using mobile phone, looking down, lying on desk, looking up, turning head, and standing.
 
 ### 2.2 Train
 The paper is under review and now needs to be kept confidential.
@@ -44,11 +26,11 @@ The paper is under review and now needs to be kept confidential.
 Code will be available soon.
 
 ## 3. Results
-AUC is the core indicator.
+mAP@0.5 is the core indicator.
 
-|     Model      | 4M-TAD | AI City Challenge 2021 | 
+|     Model      | SCB-Dataset3-S | SCAR-7D | 
 | :------------: | :-------: | :---------: | 
-|    SCTNet    |   88.89%   |    87.45%    | 
+|    GHM-YOLO    |   76.5%   |    72.3%    | 
 
 ## Acknowledgment
 The paper is under review and now needs to be kept confidential.

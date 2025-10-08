@@ -1,0 +1,14 @@
+path: xxxxxx/dataset/xxxx
+train: images/train
+val: images/valid
+test: images/test
+
+# Classes
+names:
+  0: reading/writing #读/写
+  1: using a phone #使用手机
+  2: bow head #低头
+  3: lying on the table #趴在桌上
+  4: heads up for class #上课
+  5: turn the head #扭过头去
+  6: stand #站立

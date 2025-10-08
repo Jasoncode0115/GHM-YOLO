@@ -1,0 +1,10 @@
+path: xxxxxx/dataset/xxxx
+train: images/train
+val: images/val
+test: images/test
+
+# Classes
+names:
+  0: hand-raising
+  1: reading
+  2: writing

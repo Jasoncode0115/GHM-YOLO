@@ -1,7 +1,7 @@
 # GHM-YOLO
 ## Offcial implementation of "GHM-YOLO: An efficient detection model for classroom student behavior".
 
-![pipeline](./GHM-YOLO_files/Model.tif)
+![pipeline](./GHM-YOLO_files/Model.png)
 ## 1. Dependencies
 ```
 python==3.6.13

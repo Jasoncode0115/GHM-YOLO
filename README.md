@@ -17,14 +17,6 @@ pip install ultralytics
 
 We built a self-collected dataset named SCAR-7D (Student Classroom Activity Recognition Dataset with 7 Classes) to evaluate the generalization of our model in real classroom environments.
 The dataset contains 100 lecture videos recorded under strict privacy compliance, covering pre-class, in-class, and post-class periods. Representative keyframes were extracted using a local-extrema frame-difference method (computed every 24 frames), filtering out irrelevant or low-variation frames. After preprocessing, 5,477 high-quality keyframes were obtained and carefully annotated with LabelImg into seven categories of classroom behaviors: reading/writing, using mobile phone, looking down, lying on desk, looking up, turning head, and standing.
-
-### 2.2 Train
-The paper is under review and now needs to be kept confidential.
-Code will be available soon.
-### 2.3 Evaluation
-The paper is under review and now needs to be kept confidential.
-Code will be available soon.
-
 ## 3. Results
 mAP@0.5 is the core indicator.
 
